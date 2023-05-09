@@ -14,7 +14,7 @@ function Hello() {
   }, []);
 
   return (
-    <div>
+    <div className='App'>
       <div className="Hello">
         <h1>Electron Restaurant List</h1>
       </div>

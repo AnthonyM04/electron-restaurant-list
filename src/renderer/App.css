@@ -4,7 +4,7 @@
  */
 body {
   position: relative;
-  color: lavender;
+  color: black;
   height: 100vh;
   background: linear-gradient(
     200.96deg,
@@ -52,6 +52,11 @@ a {
 a:hover {
   opacity: 1;
   text-decoration: none;
+}
+
+.App {
+  max-height: 100vh;
+  overflow-y: scroll;
 }
 
 .Hello {
