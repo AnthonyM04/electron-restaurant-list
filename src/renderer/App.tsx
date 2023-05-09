@@ -1,4 +1,5 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
+import RestCard from './components/RestCard';
 import { useState, useEffect } from 'react';
 import './App.css';
 
@@ -18,7 +19,13 @@ function Hello() {
         <h1>Electron Restaurant List</h1>
       </div>
       <div className="Hello">
-        {! restList ? <h2>Loading</h2> :restList[0].name}
+        {! restList
+          ? <h2>Loading</h2>
+          : <div className='rest-list'>
+            {restList.map (rest => (
+              <RestCard rest={rest} key={rest.id} />
+        ))}
+        </div>}
       </div>
     </div>
   );
